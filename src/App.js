@@ -11,12 +11,12 @@ const App = () => {
   },
   {
     id: nanoid(),
-    text: "This is some text",
+    text: "This is some blurb",
     date: "16/06/1986"
   },
   {
     id: nanoid(),
-    text: "This is some text",
+    text: "This is some rubbish",
     date: "17/06/1986"
   }])
 
