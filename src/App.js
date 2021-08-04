@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import NotesList from "./components/NotesList"
 import { nanoid } from 'nanoid'
 import Search from "./components/Search"
@@ -21,6 +21,12 @@ const App = () => {
   ])
   const [searchText, setSearchText] = useState("")
 
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    
+  })
+
   const AddNote = (text) => {
     const date = new Date()
     const newNote = {
@@ -39,13 +45,15 @@ const App = () => {
 
   return (
   <>
-  <Header />
-  <Search handleSearch={setSearchText} />
-  <div className="container">
-    <NotesList 
-      notes={notes.filter((note) => note.text.toLowerCase().includes(searchText))} 
-      handleAdd={AddNote} 
-      deleteNote={deleteNote} />
+   <div className={`${darkMode && 'dark-mode'}`}>
+      <Header handleToggleDarkMode={setDarkMode} />
+      <Search handleSearch={setSearchText} />
+      <div className="container">
+        <NotesList 
+          notes={notes.filter((note) => note.text.toLowerCase().includes(searchText))} 
+          handleAdd={AddNote} 
+          deleteNote={deleteNote} />
+      </div>
   </div>
   </>
   )}

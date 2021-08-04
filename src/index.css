@@ -18,12 +18,13 @@ code {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 100vh;
 }
 
 .notes-list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .note.new {
@@ -80,7 +81,7 @@ textarea::placeholder {
 .search {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
   background-color: lightgray;
   border-radius: 15px;
   padding: 1em;
@@ -98,19 +99,31 @@ input:focus {
 .toggleButton {
   border-radius: 15px;
   padding: 10px 15px 10px 15px;
-  background-color: black;
+  background-color: grey;
   color:white;
   border: none;
 }
 
 .toggleButton:hover {
   cursor: pointer;
-  background-color: grey;
+  background-color: darkgray;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px;
+  padding: 10px 20px 10px 20px
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+.dark-mode.toggleButton {
+  background-color: white;
 }
