@@ -10,13 +10,13 @@ const App = () => {
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
-      text: "1st note",
-      date: "15/06/1986"
+      text: "First note example",
+      date: "1/08/2021"
     },
     {
       id: nanoid(),
-      text: "2nd note",
-      date: "25/07/1986"
+      text: "Second note example",
+      date: "1/09/2020"
     }
   ])
   const [searchText, setSearchText] = useState("")
@@ -24,8 +24,22 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    
-  })
+    const savedNotes = JSON.parse(
+      localStorage.getItem('react-notes-app-data')
+    )
+
+    if(savedNotes) {
+      setNotes(savedNotes)
+    }
+  }, [])
+
+  // Saves notes to local storage whenever notes change
+  useEffect(() => {
+    localStorage.setItem(
+      'react-notes-app-data', 
+      JSON.stringify(notes)
+    )
+  }, [notes])
 
   const AddNote = (text) => {
     const date = new Date()

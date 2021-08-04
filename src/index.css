@@ -90,6 +90,7 @@ textarea::placeholder {
 .search input {
   border: none;
   background-color: lightgray;
+  width:auto
 }
 
 input:focus {
