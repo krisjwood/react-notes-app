@@ -8,7 +8,13 @@ const AddNote = ({ handleAdd }) => {
     }
 
     function handleSave() {
-        handleAdd(noteText)
+        if (noteText.trim().length > 0) {
+            handleAdd(noteText)
+        } else {
+            alert("No text detected")
+        }
+        
+        setNoteText("")
     }
 
     return (
