@@ -76,3 +76,21 @@ textarea::placeholder {
 .delete-icon:hover {
   cursor: pointer;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  background-color: lightgray;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.search input {
+  border: none;
+  background-color: lightgray;
+}
+
+input:focus {
+  outline: none;
+}
