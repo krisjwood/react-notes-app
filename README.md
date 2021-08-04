@@ -2,13 +2,13 @@
 Simple React app that allows users to add and delete notes.
 
 ## Light mode
-![desktop-light](https://github.com/krisjwood/react-notes-app/tree/main/public/images/web-white.jpg)
+![desktop-light](https://github.com/krisjwood/react-notes-app/blob/main/public/images/web-white.jpg)
 
 ## Dark mode
-![desktop-dark](https://github.com/krisjwood/react-notes-app/tree/main/public/images/web-black.jpg)
+![desktop-dark](https://github.com/krisjwood/react-notes-app/blob/main/public/images/web-black.jpg)
 
 ## Mobile
-![mobile-white](https://github.com/krisjwood/react-notes-app/tree/main/public/images/mobile-white.jpg)
+![mobile-white](https://github.com/krisjwood/react-notes-app/blob/main/public/images/mobile-white.jpg)
 
 ### Other features
 1. Allows users to search notes text
