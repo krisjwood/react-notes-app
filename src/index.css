@@ -44,8 +44,8 @@ textarea::placeholder {
 }
 
 .save {
-  background-color: grey;
-  /* border: none; */
+  background-color: white;
+  border: none;
   border-radius: 15px;
   padding: 10px 15px 10px 15px;
 }
@@ -93,4 +93,24 @@ textarea::placeholder {
 
 input:focus {
   outline: none;
+}
+
+.toggleButton {
+  border-radius: 15px;
+  padding: 10px 15px 10px 15px;
+  background-color: black;
+  color:white;
+  border: none;
+}
+
+.toggleButton:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
 }
