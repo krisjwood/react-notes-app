@@ -64,6 +64,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: pre-wrap;
 }
 
 .note-footer {
@@ -72,3 +73,6 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
+.delete-icon:hover {
+  cursor: pointer;
+}
