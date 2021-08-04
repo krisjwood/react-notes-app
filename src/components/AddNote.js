@@ -1,10 +1,28 @@
-const AddNote = () => {
+import { useState } from "react"
+
+const AddNote = ({ handleAdd }) => {
+    const [noteText, setNoteText] = useState('')
+
+    function handleChange(e) {
+        setNoteText(e.target.value)
+    }
+
+    function handleSave() {
+        handleAdd(noteText)
+    }
+
     return (
         <div className="note new">
-            <textarea rows="8" cols="10" placeholder="Type your note here..."></textarea>
+            <textarea 
+                rows="8" 
+                cols="10" 
+                placeholder="Type your note here..."
+                value={noteText}
+                onChange={handleChange}
+            ></textarea>
             <div className="note-footer">
                 <small>200 remaining</small>
-                <button className="save">Post it</button>
+                <button className="save" onClick={handleSave}>Post it</button>
             </div>
         </div>
     )
